@@ -19,7 +19,7 @@ const registerUser = async (req, res) => {
       });
     }
     // Validate name length
-    if (name.trim().length < 2) {
+    if (name.length < 2) {
       return res.status(400).json({
         message: "Name must be at least 2 characters",
       });
